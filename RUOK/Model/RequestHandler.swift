@@ -24,9 +24,8 @@ struct RequestHandler {
                 if let image = UIImage(data: data) {
                      DispatchQueue.main.async {
                         NotificationCenter.default.post(name: Notification.Name("img"), object: image)
+                        print("Returned Image")
                      }
-                    
-                    print("returned image")
                 } else {
                     let dataString = String(data: data, encoding: .utf8)
                     print("return data:\(String(describing: dataString))")
@@ -52,11 +51,10 @@ struct RequestHandler {
 
         let task = URLSession.shared.dataTask(with: request) {data, response, error in
             if let data = data {
-                let dataString = String(data: data, encoding: .utf8)
                 DispatchQueue.main.async {
-                        NotificationCenter.default.post(name: Notification.Name("text"), object: dataString)
+                    NotificationCenter.default.post(name: Notification.Name("text"), object: data)
+                    print("Returned Text")
                 }
-                print("returned text")
                 
             } else if let error = error {
                 print("HTTP Request Failed \(error)")

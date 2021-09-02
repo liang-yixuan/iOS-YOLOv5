@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -176,9 +175,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EF1-oZ-TIq" userLabel="Text Result">
                                         <rect key="frame" x="0.0" y="351" width="390" height="371"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="agP-Y6-aIK">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="agP-Y6-aIK">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="371"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" red="1" green="0.78039215689999997" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </tableView>
                                         </subviews>
                                         <constraints>
@@ -209,6 +208,7 @@
                     <navigationItem key="navigationItem" id="5JH-rf-BSO"/>
                     <connections>
                         <outlet property="resultImgView" destination="6q4-3x-SyB" id="kvS-em-ghu"/>
+                        <outlet property="tableView" destination="agP-Y6-aIK" id="r5s-XP-G2t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fo-bE-nIu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -240,8 +240,5 @@
         <image name="CHOOSE PHOTO BUTTON" width="130" height="23.333333969116211"/>
         <image name="TAKE A PHOTO BUTTON" width="130" height="23.333333969116211"/>
         <image name="bar" width="130" height="94.666664123535156"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

@@ -48,22 +48,17 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         picker.dismiss(animated: true) {
             self.performSegue(withIdentifier: "showResult", sender: self)}
-        
     }
 
     @IBAction func takePhotoButtonClick(_ sender: UIButton) {
         present(imagePicker1, animated: true, completion: nil)
-        print("take photo button clicked")
     }
     
     @IBAction func choosePhotoButtonClick(_ sender: UIButton) {
         present(imagePicker2, animated: true, completion: nil)
-        print("choose photo button clicked")
-
     }
     
     @IBAction func aboutButtonClick(_ sender: UIButton) {
-        print("about button clicked")
     }
 
 
