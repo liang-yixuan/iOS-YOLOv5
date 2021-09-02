@@ -11,12 +11,9 @@ import Vision
 import MobileCoreServices
 
 class MainViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
-//    @IBOutlet weak var imageView: UIImageView!
     
     let imagePicker1 = UIImagePickerController()
     let imagePicker2 = UIImagePickerController()
-    
     var requestHandler = RequestHandler()
     
     
@@ -45,44 +42,13 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            imageRequest(image : pickedImage.upOrientationImage()!.resizeWithPercent(percentage: 0.5)!)
-            
+            requestHandler.imageRequest(image : pickedImage.upOrientationImage()!.resizeWithPercent(percentage: 0.5)!)
+            requestHandler.textRequest(image : pickedImage.upOrientationImage()!.resizeWithPercent(percentage: 0.5)!)
         }
         
         picker.dismiss(animated: true) {
             self.performSegue(withIdentifier: "showResult", sender: self)}
         
-    }
-    
-    func imageRequest(image : UIImage) {
-        let request: URLRequest
-
-        do {
-            request = try requestHandler.createRequest(route: "/", image: image)
-        } catch {
-            print(error)
-            return
-        }
-
-        let task = URLSession.shared.dataTask(with: request) {data, response, error in
-            if let data = data {
-                if let image = UIImage(data: data) {
-                     DispatchQueue.main.async {
-                        NotificationCenter.default.post(name: Notification.Name("img"), object: image)
-                        NotificationCenter.default.post(name: Notification.Name("text"), object: "Got text as well")
-                     }
-                    
-                    print("returned image")
-                } else {
-                    let dataString = String(data: data, encoding: .utf8)
-                    print("return data:\(String(describing: dataString))")
-                }
-            } else if let error = error {
-                print("HTTP Request Failed \(error)")
-            }
-
-        }
-        task.resume()
     }
 
     @IBAction func takePhotoButtonClick(_ sender: UIButton) {
