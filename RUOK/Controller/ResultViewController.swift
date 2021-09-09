@@ -6,7 +6,7 @@
 //
 
 import UIKit
-class ResultViewController: UIViewController {
+class ResultViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var resultImgView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -15,11 +15,24 @@ class ResultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//// Change the Back button on nav bar
+//        let backBTN = UIBarButtonItem(image: UIImage(named: "menubar"),
+//                                      style: .done,
+//                                      target: navigationController,
+//                                      action: #selector(UINavigationController.popViewController(animated:)))
+//        navigationItem.leftBarButtonItem = backBTN
+//        navigationController?.interactivePopGestureRecognizer?.delegate = self
+        
+// Receive data from Main view
         NotificationCenter.default.addObserver(self, selector: #selector(didGetImg(_:)), name: Notification.Name("img"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(didGetText(_:)), name: Notification.Name("text"), object: nil)
+        
+// Set table view data source and register UI view for cell
         tableView.dataSource = self
         tableView.register(UINib(nibName: "PersonCell", bundle: nil), forCellReuseIdentifier: "TableCell")
     }
+    
     
     @objc func didGetImg(_ notification: Notification) {
         let gotImage = notification.object as! UIImage?
@@ -53,5 +66,3 @@ extension ResultViewController: UITableViewDataSource {
         return cell
     }
 }
-
-// could add a delegate method for cells to be click

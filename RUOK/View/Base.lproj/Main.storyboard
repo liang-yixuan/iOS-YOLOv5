@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,18 +13,18 @@
             <objects>
                 <viewController storyboardIdentifier="about" id="HRy-qH-Dnv" customClass="AboutViewController" customModule="RUOK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="euP-qd-lU1" customClass="About">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnA-kr-Sbr">
                                 <rect key="frame" x="159.66666666666666" y="60" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="TextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bdp-vX-Djv"/>
-                        <color key="backgroundColor" red="1" green="0.78039215689999997" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="ThemeBGColor"/>
                         <constraints>
                             <constraint firstItem="SnA-kr-Sbr" firstAttribute="top" secondItem="bdp-vX-Djv" secondAttribute="top" constant="60" id="1pE-hb-J62"/>
                             <constraint firstItem="SnA-kr-Sbr" firstAttribute="centerX" secondItem="euP-qd-lU1" secondAttribute="centerX" id="pNf-0z-2PM"/>
@@ -44,76 +45,94 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Jhj-yB-sMY">
-                                <rect key="frame" x="16" y="88" width="358" height="722"/>
+                                <rect key="frame" x="16" y="88" width="360" height="722"/>
                                 <subviews>
                                     <view contentMode="scaleAspectFit" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="gyU-Rl-VBM" userLabel="Top View">
-                                        <rect key="frame" x="42" y="0.0" width="274" height="276"/>
+                                        <rect key="frame" x="43" y="0.0" width="274" height="290"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R U OK?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcR-v4-f2z">
-                                                <rect key="frame" x="0.66666666666665719" y="150" width="272.66666666666674" height="80"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAPPY ;)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcR-v4-f2z">
+                                                <rect key="frame" x="12" y="150" width="250" height="52"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="KkV-vm-YHH"/>
-                                                    <constraint firstAttribute="height" constant="80" id="yu2-V1-cBZ"/>
+                                                    <constraint firstAttribute="width" constant="250" id="KkV-vm-YHH"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="60"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
+                                                <color key="textColor" name="TextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We help You with technology." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riq-XZ-qOe">
-                                                <rect key="frame" x="35.333333333333329" y="240" width="203.66666666666669" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PEOPLE" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8z-4g-xpx">
+                                                <rect key="frame" x="12" y="207" width="250" height="52"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="jym-rw-Iva"/>
+                                                    <constraint firstAttribute="width" constant="250" id="GQK-if-0Ik"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
+                                                <color key="textColor" name="TextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An App Identify your Age, Gender, Ethnicity and Emotion" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riq-XZ-qOe">
+                                                <rect key="frame" x="12" y="279" width="250" height="39"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="x4S-qj-4Tv"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="TextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.78039215689999997" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="HcR-v4-f2z" firstAttribute="centerX" secondItem="gyU-Rl-VBM" secondAttribute="centerX" id="AJh-fz-fEC"/>
+                                            <constraint firstItem="riq-XZ-qOe" firstAttribute="top" secondItem="b8z-4g-xpx" secondAttribute="bottom" constant="20" id="Dz9-IS-MQH"/>
                                             <constraint firstItem="HcR-v4-f2z" firstAttribute="top" secondItem="gyU-Rl-VBM" secondAttribute="top" constant="150" id="EXz-gM-hHE"/>
-                                            <constraint firstItem="riq-XZ-qOe" firstAttribute="top" secondItem="HcR-v4-f2z" secondAttribute="bottom" constant="10" id="J61-rn-qrt"/>
+                                            <constraint firstItem="b8z-4g-xpx" firstAttribute="top" secondItem="HcR-v4-f2z" secondAttribute="bottom" constant="5" id="WMS-P8-duc"/>
+                                            <constraint firstItem="b8z-4g-xpx" firstAttribute="centerX" secondItem="gyU-Rl-VBM" secondAttribute="centerX" id="amq-gU-VKU"/>
                                             <constraint firstItem="riq-XZ-qOe" firstAttribute="centerX" secondItem="gyU-Rl-VBM" secondAttribute="centerX" id="dNK-Lp-vfI"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbo-bM-dph" userLabel="Library">
-                                        <rect key="frame" x="49" y="376" width="260" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="4Op-aS-7Gg"/>
-                                            <constraint firstAttribute="width" constant="260" id="yMM-ak-NWl"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="CHOOSE PHOTO BUTTON"/>
-                                        <connections>
-                                            <action selector="choosePhotoButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vrc-ye-A2f"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VlY-Wg-cOT" userLabel="Camera">
-                                        <rect key="frame" x="49" y="524" width="260" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="AQX-JN-5WJ"/>
-                                            <constraint firstAttribute="width" constant="260" id="BRl-cv-NJy"/>
-                                        </constraints>
-                                        <state key="normal" backgroundImage="TAKE A PHOTO BUTTON"/>
-                                        <connections>
-                                            <action selector="takePhotoButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LyO-mf-FZC"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yUu-OQ-DEJ">
+                                        <rect key="frame" x="0.0" y="390" width="360" height="202"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zN-Jl-6mT" userLabel="Camera">
+                                                <rect key="frame" x="0.0" y="11" width="180" height="180"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="180" id="FVj-Vk-AiB"/>
+                                                    <constraint firstAttribute="width" secondItem="6zN-Jl-6mT" secondAttribute="height" multiplier="1:1" id="WxJ-C1-Oce"/>
+                                                    <constraint firstAttribute="height" constant="180" id="pZV-Ab-dNZ"/>
+                                                </constraints>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="-99" minY="-99" maxX="0.0" maxY="-99"/>
+                                                <state key="normal" backgroundImage="camera"/>
+                                                <connections>
+                                                    <action selector="takePhotoButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zzN-3y-WRr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUc-pg-yUu" userLabel="Library">
+                                                <rect key="frame" x="180" y="11" width="180" height="180"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="180" id="FiQ-f7-NN7"/>
+                                                    <constraint firstAttribute="width" constant="180" id="Hfk-Cw-3ap"/>
+                                                    <constraint firstAttribute="width" secondItem="eUc-pg-yUu" secondAttribute="height" multiplier="1:1" id="Zr9-XU-gzB"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="library"/>
+                                                <connections>
+                                                    <action selector="choosePhotoButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WFa-fo-NxS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="joM-AH-FpT" userLabel="Bottom">
-                                        <rect key="frame" x="59" y="672" width="240" height="50"/>
+                                        <rect key="frame" x="60" y="692" width="240" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="LRf-aX-Zgv"/>
+                                            <constraint firstAttribute="height" constant="30" id="LRf-aX-Zgv"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlW-0W-Q81">
-                                <rect key="frame" x="20" y="108" width="50" height="50"/>
+                                <rect key="frame" x="10" y="108" width="45" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="M2n-re-2Pi"/>
-                                    <constraint firstAttribute="height" constant="50" id="ZD0-a1-yki"/>
+                                    <constraint firstAttribute="width" constant="45" id="M2n-re-2Pi"/>
+                                    <constraint firstAttribute="height" constant="45" id="ZD0-a1-yki"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="bar"/>
+                                <state key="normal" backgroundImage="menubar"/>
                                 <connections>
                                     <action selector="aboutButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IOn-aX-0Uw"/>
                                     <segue destination="HRy-qH-Dnv" kind="popoverPresentation" popoverAnchorView="wlW-0W-Q81" id="Fd3-sb-DIW">
@@ -123,14 +142,13 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="1" green="0.78039215689999997" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="ThemeBGColor"/>
                         <constraints>
-                            <constraint firstItem="wlW-0W-Q81" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="QTv-w0-sty"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jhj-yB-sMY" secondAttribute="bottom" id="QqB-QF-jmy"/>
                             <constraint firstItem="Jhj-yB-sMY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="To6-gf-Tys"/>
                             <constraint firstItem="Jhj-yB-sMY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YPy-t4-fHc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jhj-yB-sMY" secondAttribute="trailing" id="nAx-e2-Ry8"/>
-                            <constraint firstItem="wlW-0W-Q81" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="orX-DG-FC9"/>
+                            <constraint firstItem="wlW-0W-Q81" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="orX-DG-FC9"/>
                             <constraint firstItem="wlW-0W-Q81" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="zn2-t6-btz"/>
                         </constraints>
                     </view>
@@ -177,7 +195,7 @@
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="agP-Y6-aIK">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="371"/>
-                                                <color key="backgroundColor" red="1" green="0.78039215689999997" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" name="ThemeBGColor"/>
                                             </tableView>
                                         </subviews>
                                         <constraints>
@@ -197,7 +215,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u1u-NV-WL9"/>
-                        <color key="backgroundColor" red="1" green="0.78039215689999997" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="ThemeBGColor"/>
                         <constraints>
                             <constraint firstItem="uGz-4q-W6h" firstAttribute="leading" secondItem="u1u-NV-WL9" secondAttribute="leading" id="Byk-td-cU9"/>
                             <constraint firstItem="uGz-4q-W6h" firstAttribute="top" secondItem="u1u-NV-WL9" secondAttribute="top" id="emL-YB-3Zl"/>
@@ -224,7 +242,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eQ9-dX-oj2">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="0.78039215689999997" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" name="ThemeBGColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -237,8 +255,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CHOOSE PHOTO BUTTON" width="130" height="23.333333969116211"/>
-        <image name="TAKE A PHOTO BUTTON" width="130" height="23.333333969116211"/>
-        <image name="bar" width="130" height="94.666664123535156"/>
+        <image name="camera" width="180" height="180"/>
+        <image name="library" width="180" height="180"/>
+        <image name="menubar" width="170.66667175292969" height="170.66667175292969"/>
+        <namedColor name="TextColor">
+            <color red="0.9137254901960784" green="0.30588235294117649" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ThemeBGColor">
+            <color red="1" green="0.97254901959999995" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

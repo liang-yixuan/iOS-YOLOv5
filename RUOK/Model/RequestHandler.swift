@@ -68,7 +68,7 @@ struct RequestHandler {
     func createRequest(route: String, image: UIImage) throws -> URLRequest {
 
         let boundary = generateBoundaryString()
-        let url = URL(string: "http://192.168.0.2:5000" + route)!
+        let url = URL(string: "http://172.26.130.96:5000" + route)!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
