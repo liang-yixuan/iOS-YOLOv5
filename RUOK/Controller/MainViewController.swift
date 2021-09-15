@@ -43,7 +43,7 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             requestHandler.imageRequest(image : pickedImage.upOrientationImage()!.resizeWithPercent(percentage: 0.5)!)
-            requestHandler.textRequest(image : pickedImage.upOrientationImage()!.resizeWithPercent(percentage: 0.5)!)
+//            requestHandler.textRequest(image : pickedImage.upOrientationImage()!.resizeWithPercent(percentage: 0.5)!)
         }
         
         picker.dismiss(animated: true) {

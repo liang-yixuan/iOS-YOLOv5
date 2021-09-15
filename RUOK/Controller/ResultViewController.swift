@@ -15,14 +15,7 @@ class ResultViewController: UIViewController, UIGestureRecognizerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//// Change the Back button on nav bar
-//        let backBTN = UIBarButtonItem(image: UIImage(named: "menubar"),
-//                                      style: .done,
-//                                      target: navigationController,
-//                                      action: #selector(UINavigationController.popViewController(animated:)))
-//        navigationItem.leftBarButtonItem = backBTN
-//        navigationController?.interactivePopGestureRecognizer?.delegate = self
+
         
 // Receive data from Main view
         NotificationCenter.default.addObserver(self, selector: #selector(didGetImg(_:)), name: Notification.Name("img"), object: nil)
