@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		460896E026E0CBD900D50E60 /* ResultProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultProcessor.swift; sourceTree = "<group>"; };
-		4618BE4626D4D1E30075EA2E /* RUOK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RUOK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4618BE4626D4D1E30075EA2E /* HappyPeople.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyPeople.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4618BE4926D4D1E30075EA2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4618BE4B26D4D1E30075EA2E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4618BE5026D4D1E30075EA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		4618BE3D26D4D1E30075EA2E = {
 			isa = PBXGroup;
 			children = (
-				4618BE4826D4D1E30075EA2E /* RUOK */,
+				4618BE4826D4D1E30075EA2E /* HappyPeople */,
 				4618BE4726D4D1E30075EA2E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,12 +62,12 @@
 		4618BE4726D4D1E30075EA2E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4618BE4626D4D1E30075EA2E /* RUOK.app */,
+				4618BE4626D4D1E30075EA2E /* HappyPeople.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4618BE4826D4D1E30075EA2E /* RUOK */ = {
+		4618BE4826D4D1E30075EA2E /* HappyPeople */ = {
 			isa = PBXGroup;
 			children = (
 				46EA63CF26DB83270064A9A7 /* Model */,
@@ -79,7 +79,7 @@
 				4618BE5726D4D1E80075EA2E /* Info.plist */,
 				46EA63D226DBC4910064A9A7 /* Happy_People.jpeg */,
 			);
-			path = RUOK;
+			path = HappyPeople;
 			sourceTree = "<group>";
 		};
 		4618BE5E26D4E2D30075EA2E /* Controller */ = {
@@ -115,9 +115,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4618BE4526D4D1E30075EA2E /* RUOK */ = {
+		4618BE4526D4D1E30075EA2E /* HappyPeople */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4618BE5A26D4D1E80075EA2E /* Build configuration list for PBXNativeTarget "RUOK" */;
+			buildConfigurationList = 4618BE5A26D4D1E80075EA2E /* Build configuration list for PBXNativeTarget "HappyPeople" */;
 			buildPhases = (
 				4618BE4226D4D1E30075EA2E /* Sources */,
 				4618BE4326D4D1E30075EA2E /* Frameworks */,
@@ -127,9 +127,9 @@
 			);
 			dependencies = (
 			);
-			name = RUOK;
+			name = HappyPeople;
 			productName = RUOK;
-			productReference = 4618BE4626D4D1E30075EA2E /* RUOK.app */;
+			productReference = 4618BE4626D4D1E30075EA2E /* HappyPeople.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -146,7 +146,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4618BE4126D4D1E30075EA2E /* Build configuration list for PBXProject "RUOK" */;
+			buildConfigurationList = 4618BE4126D4D1E30075EA2E /* Build configuration list for PBXProject "HappyPeople" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -159,7 +159,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4618BE4526D4D1E30075EA2E /* RUOK */,
+				4618BE4526D4D1E30075EA2E /* HappyPeople */,
 			);
 		};
 /* End PBXProject section */
@@ -340,12 +340,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D5A38UATT9;
-				INFOPLIST_FILE = RUOK/Info.plist;
+				INFOPLIST_FILE = HappyPeople/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yixuanliang.RUOK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yixuanliang.HappyPeople;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -359,12 +359,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D5A38UATT9;
-				INFOPLIST_FILE = RUOK/Info.plist;
+				INFOPLIST_FILE = HappyPeople/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yixuanliang.RUOK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yixuanliang.HappyPeople;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -374,7 +374,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4618BE4126D4D1E30075EA2E /* Build configuration list for PBXProject "RUOK" */ = {
+		4618BE4126D4D1E30075EA2E /* Build configuration list for PBXProject "HappyPeople" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4618BE5826D4D1E80075EA2E /* Debug */,
@@ -383,7 +383,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4618BE5A26D4D1E80075EA2E /* Build configuration list for PBXNativeTarget "RUOK" */ = {
+		4618BE5A26D4D1E80075EA2E /* Build configuration list for PBXNativeTarget "HappyPeople" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4618BE5B26D4D1E80075EA2E /* Debug */,

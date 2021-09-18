@@ -28,7 +28,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>$(PRODUCT_NAME) wants your camera.</string>
 	<key>NSLocalNetworkUsageDescription</key>
-	<string></string>
+	<string>$(PRODUCT_NAME) could function if this is OK.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>$(PRODUCT_NAME) wants your library.</string>
 	<key>UIApplicationSceneManifest</key>

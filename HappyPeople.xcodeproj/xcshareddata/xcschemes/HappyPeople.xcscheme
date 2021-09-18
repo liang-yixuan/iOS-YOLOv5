@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4618BE4526D4D1E30075EA2E"
-               BuildableName = "RUOK.app"
-               BlueprintName = "RUOK"
-               ReferencedContainer = "container:RUOK.xcodeproj">
+               BuildableName = "HappyPeople.app"
+               BlueprintName = "HappyPeople"
+               ReferencedContainer = "container:HappyPeople.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4618BE4526D4D1E30075EA2E"
-            BuildableName = "RUOK.app"
-            BlueprintName = "RUOK"
-            ReferencedContainer = "container:RUOK.xcodeproj">
+            BuildableName = "HappyPeople.app"
+            BlueprintName = "HappyPeople"
+            ReferencedContainer = "container:HappyPeople.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4618BE4526D4D1E30075EA2E"
-            BuildableName = "RUOK.app"
-            BlueprintName = "RUOK"
-            ReferencedContainer = "container:RUOK.xcodeproj">
+            BuildableName = "HappyPeople.app"
+            BlueprintName = "HappyPeople"
+            ReferencedContainer = "container:HappyPeople.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

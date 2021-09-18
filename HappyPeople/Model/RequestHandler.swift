@@ -8,6 +8,7 @@
 import UIKit
 
 struct RequestHandler {
+    let IPAddress = "http://115.146.94.146:5001"
     
     func imageRequest(image : UIImage) {
         let imageRequest: URLRequest
@@ -91,7 +92,7 @@ struct RequestHandler {
     func createImageRequest(route: String, image: UIImage) throws -> (URLRequest, String) {
 
         let boundary = generateBoundaryString()
-        let url = URL(string: "http://192.168.0.2:5000" + route)!
+        let url = URL(string: IPAddress + route)!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
@@ -122,7 +123,7 @@ struct RequestHandler {
     
     func createTextRequest(route: String, boundary: String) throws -> URLRequest{
 
-        let url = URL(string: "http://192.168.0.2:5000" + route)!
+        let url = URL(string: IPAddress + route)!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.allHTTPHeaderFields = ["content-type": "text/plain"]
