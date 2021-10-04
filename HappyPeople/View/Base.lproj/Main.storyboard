@@ -11,13 +11,50 @@
         <!--About View Controller-->
         <scene sceneID="bzR-Nc-AQN">
             <objects>
-                <viewController storyboardIdentifier="about" id="HRy-qH-Dnv" customClass="AboutViewController" customModule="RUOK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="about" id="HRy-qH-Dnv" customClass="AboutViewController" customModule="HappyPeople" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="euP-qd-lU1" customClass="About">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnA-kr-Sbr">
-                                <rect key="frame" x="159.66666666666666" y="60" width="71" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnA-kr-Sbr">
+                                <rect key="frame" x="172" y="60" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="TextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5F-XL-drF">
+                                <rect key="frame" x="45" y="293.33333333333331" width="300" height="81.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="CHR-xB-gWp"/>
+                                </constraints>
+                                <string key="text">The app uses AI (object dectection) technologies that have been trained on human faces. The training data is restricted to research purpose only.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="TextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact: yixuliang@student.unimelb.edu.au" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIl-d3-ltF">
+                                <rect key="frame" x="45" y="394.66666666666669" width="300" height="40.666666666666686"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Lb1-o1-UMJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="TextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The app is able to identified human faces in an image and classified them based on age, emotion, ethnicity and gender." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nee-Vt-A6k">
+                                <rect key="frame" x="45" y="192" width="300" height="81.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Cvz-xw-ZmZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="TextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app is the result of a research project conducted by students at the University of Melbourne. " textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uF-EE-whq">
+                                <rect key="frame" x="45" y="111" width="300" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Toa-Mc-kQv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="TextColor"/>
                                 <nil key="highlightedColor"/>
@@ -27,19 +64,27 @@
                         <color key="backgroundColor" name="ThemeBGColor"/>
                         <constraints>
                             <constraint firstItem="SnA-kr-Sbr" firstAttribute="top" secondItem="bdp-vX-Djv" secondAttribute="top" constant="60" id="1pE-hb-J62"/>
+                            <constraint firstItem="5uF-EE-whq" firstAttribute="top" secondItem="SnA-kr-Sbr" secondAttribute="bottom" constant="30" id="7fN-Tp-GJY"/>
+                            <constraint firstItem="c5F-XL-drF" firstAttribute="top" secondItem="Nee-Vt-A6k" secondAttribute="bottom" constant="20" id="H6A-US-G4Y"/>
+                            <constraint firstItem="SIl-d3-ltF" firstAttribute="centerX" secondItem="euP-qd-lU1" secondAttribute="centerX" id="UQD-yQ-Rev"/>
+                            <constraint firstItem="Nee-Vt-A6k" firstAttribute="centerX" secondItem="euP-qd-lU1" secondAttribute="centerX" id="YKG-rd-pOR"/>
+                            <constraint firstItem="c5F-XL-drF" firstAttribute="centerX" secondItem="euP-qd-lU1" secondAttribute="centerX" id="hCk-Rg-Ukt"/>
+                            <constraint firstItem="5uF-EE-whq" firstAttribute="centerX" secondItem="euP-qd-lU1" secondAttribute="centerX" id="oFW-P3-BiV"/>
                             <constraint firstItem="SnA-kr-Sbr" firstAttribute="centerX" secondItem="euP-qd-lU1" secondAttribute="centerX" id="pNf-0z-2PM"/>
+                            <constraint firstItem="Nee-Vt-A6k" firstAttribute="top" secondItem="5uF-EE-whq" secondAttribute="bottom" constant="20" id="pfe-UN-CpQ"/>
+                            <constraint firstItem="SIl-d3-ltF" firstAttribute="top" secondItem="c5F-XL-drF" secondAttribute="bottom" constant="20" id="y1b-In-Wws"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JmE-MS-moC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rvg-E1-ySL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2763" y="823"/>
+            <point key="canvasLocation" x="2761.5384615384614" y="822.51184834123217"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="main" id="BYZ-38-t0r" customClass="MainViewController" customModule="RUOK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" id="BYZ-38-t0r" customClass="MainViewController" customModule="HappyPeople" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,7 +138,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zN-Jl-6mT" userLabel="Camera">
                                                 <rect key="frame" x="0.0" y="11" width="179" height="180"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="180" id="FVj-Vk-AiB"/>
+                                                    <constraint firstAttribute="width" constant="179" id="FVj-Vk-AiB"/>
                                                     <constraint firstAttribute="height" constant="180" id="pZV-Ab-dNZ"/>
                                                 </constraints>
                                                 <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
@@ -107,7 +152,7 @@
                                                 <rect key="frame" x="179" y="11" width="179" height="180"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="180" id="FiQ-f7-NN7"/>
-                                                    <constraint firstAttribute="width" constant="180" id="Hfk-Cw-3ap"/>
+                                                    <constraint firstAttribute="width" constant="179" id="Hfk-Cw-3ap"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="library"/>
                                                 <connections>
@@ -162,7 +207,7 @@
         <!--Result View Controller-->
         <scene sceneID="Sbx-XB-8OY">
             <objects>
-                <viewController storyboardIdentifier="result" id="iyS-1U-kYP" customClass="ResultViewController" customModule="RUOK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="result" id="iyS-1U-kYP" customClass="ResultViewController" customModule="HappyPeople" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vSZ-aU-Xg7">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
