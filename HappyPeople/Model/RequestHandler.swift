@@ -8,8 +8,8 @@
 import UIKit
 
 struct RequestHandler {
-    let IPAddress = "http://115.146.94.146:5001"
-    
+//    let IPAddress = "http://115.146.94.146:5001"
+    let IPAddress : String
     func imageRequest(image : UIImage) {
         let imageRequest: URLRequest
         let boundary: String

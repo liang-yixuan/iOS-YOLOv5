@@ -14,8 +14,10 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     let imagePicker1 = UIImagePickerController()
     let imagePicker2 = UIImagePickerController()
-    var requestHandler = RequestHandler()
-    
+    var ssdRequestHandler = RequestHandler(IPAddress: "http://115.146.94.146:5004")
+    var frcnnRequestHandler = RequestHandler(IPAddress: "http://115.146.94.146:5003")
+    var yoloRequestHandler = RequestHandler(IPAddress: "http://115.146.94.146:5001")
+    var model : String = "SSD"
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -42,7 +44,17 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            requestHandler.imageRequest(image : pickedImage.upOrientationImage()!.resizeWithWidth(width: 300)!.removeAlpha())
+            switch model {
+            case "SSD" :
+                ssdRequestHandler.imageRequest(image : pickedImage.upOrientationImage()!.resizeWithWidth(width: 300)!.removeAlpha())
+            case "FRCNN":
+                frcnnRequestHandler.imageRequest(image : pickedImage.upOrientationImage()!.resizeWithWidth(width: 300)!.removeAlpha())
+            case "YOLO":
+                yoloRequestHandler.imageRequest(image : pickedImage.upOrientationImage()!.resizeWithWidth(width: 300)!.removeAlpha())
+            default:
+                break
+            }
+//            yoloRequestHandler.imageRequest(image : pickedImage.upOrientationImage()!.resizeWithWidth(width: 300)!.removeAlpha())
         }
         
         picker.dismiss(animated: true) {
@@ -61,6 +73,21 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
 
 
+    @IBAction func modelChange(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            model = "SSD"
+            print(model)
+        case 1:
+            model = "FRCNN"
+            print(model)
+        case 2:
+            model = "YOLO"
+            print(model)
+        default:
+            break
+        }
+    }
 }
 
 extension UIImage {
