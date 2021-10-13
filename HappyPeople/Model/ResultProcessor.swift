@@ -1,6 +1,6 @@
 //
 //  ResultProcessor.swift
-//  RUOK
+//  HAPPYPEOPLE
 //
 //  Created by SHORT on 2/9/21.
 //
@@ -14,7 +14,7 @@ struct ResultProcessor {
         do {
             let decodedData = try decoder.decode(Result.self, from: result)
             for response in decodedData.response {
-                let person = Person(id: String(response.object), age: response.age_class_label, emotion: response.emo_class_label, ethnicity: response.ethnicity_class_label, gender: response.gender_class_label)
+                let person = Person(id: String(response.object), age: (response.age_class_label ?? "Unknown")!, emotion: (response.emo_class_label ?? "Unknown")!, ethnicity: (response.ethnicity_class_label  ?? "Unknown")!, gender: (response.gender_class_label  ?? "Unknown")!)
                 people.append(person)
             }
         } catch {
@@ -32,15 +32,14 @@ struct Person {
     let gender : String
 }
 
-
 struct Result : Decodable {
     let response : [Object]
 }
 
 struct Object : Decodable {
     let object : Int
-    let age_class_label : String
-    let gender_class_label : String
-    let ethnicity_class_label : String
-    let emo_class_label : String
+    var age_class_label : String?
+    var gender_class_label : String?
+    var ethnicity_class_label : String?
+    var emo_class_label : String?
 }

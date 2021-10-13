@@ -1,6 +1,6 @@
 //
 //  ResultViewController.swift
-//  RUOK
+//  HAPPYPEOPLE
 //
 //  Created by SHORT on 29/8/21.
 //

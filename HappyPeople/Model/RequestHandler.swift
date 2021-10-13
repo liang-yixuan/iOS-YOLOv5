@@ -1,6 +1,6 @@
 //
 //  RequestHandler.swift
-//  RUOK
+//  HAPPYPEOPLE
 //
 //  Created by SHORT on 31/8/21.
 //
@@ -13,6 +13,7 @@ struct RequestHandler {
     func imageRequest(image : UIImage) {
         let imageRequest: URLRequest
         let boundary: String
+
         do {
             (imageRequest, boundary) = try createImageRequest(route: "/", image: image)
         } catch {
@@ -57,36 +58,7 @@ struct RequestHandler {
 
         }
         task.resume()
-        
-
-        
-        
     }
-    
-    
-//    func textRequest(image : UIImage) {
-//        let request: URLRequest
-//        let boundary: String
-//        do {
-//            (request, boundary) = try createImageRequest(route: "/detections", image: image)
-//        } catch {
-//            print(error)
-//            return
-//        }
-//        print(boundary)
-//        let task = URLSession.shared.dataTask(with: request) {data, response, error in
-//            if let data = data {
-//                DispatchQueue.main.async {
-//                    NotificationCenter.default.post(name: Notification.Name("text"), object: data)
-//                    print("Returned Text")
-//                }
-//
-//            } else if let error = error {
-//                print("HTTP Request Failed \(error)")
-//            }
-//        }
-//        task.resume()
-//    }
     
     
     func createImageRequest(route: String, image: UIImage) throws -> (URLRequest, String) {
@@ -104,7 +76,7 @@ struct RequestHandler {
     private func createImageBody(boundary: String, image: UIImage) throws -> Data {
         var body = Data()
             let data = Data((image.pngData())!)
-            let mimetype = "image/jpeg"
+            let mimetype = "image/*"
 
             body.append("--\(boundary)\r\n")
             body.append("Content-Disposition: form-data; name=\"file\"; filename=\"\(boundary).jpeg\"\r\n")
@@ -130,12 +102,9 @@ struct RequestHandler {
         request.httpBody = boundary.data(using: .utf8)
         return request
     }
-    
-
 }
 
 extension Data {
-
     mutating func append(_ string: String, using encoding: String.Encoding = .utf8) {
         if let data = string.data(using: encoding) {
             append(data)

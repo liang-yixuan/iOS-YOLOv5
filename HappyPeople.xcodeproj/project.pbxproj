@@ -97,7 +97,6 @@
 			children = (
 				4618BE5426D4D1E80075EA2E /* LaunchScreen.storyboard */,
 				4618BE4F26D4D1E30075EA2E /* Main.storyboard */,
-				46ADF8E026E0B95400687085 /* PersonCell.swift */,
 				46ADF8E126E0B95400687085 /* PersonCell.xib */,
 			);
 			path = View;
@@ -108,6 +107,7 @@
 			children = (
 				46ADF8D526DE2C0900687085 /* RequestHandler.swift */,
 				460896E026E0CBD900D50E60 /* ResultProcessor.swift */,
+				46ADF8E026E0B95400687085 /* PersonCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

@@ -1,6 +1,6 @@
 //
 //  MainViewController.swift
-//  RUOK
+//  HAPPYPEOPLE
 //
 //  Created by SHORT on 24/8/21.
 //
@@ -42,8 +42,7 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            requestHandler.imageRequest(image : pickedImage.upOrientationImage()!.resizeWithPercent(percentage: 0.5)!)
-//            requestHandler.textRequest(image : pickedImage.upOrientationImage()!.resizeWithPercent(percentage: 0.5)!)
+            requestHandler.imageRequest(image : pickedImage.upOrientationImage()!.resizeWithWidth(width: 300)!.removeAlpha())
         }
         
         picker.dismiss(animated: true) {
@@ -65,6 +64,16 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 }
 
 extension UIImage {
+    func removeAlpha() -> UIImage {
+            let format = UIGraphicsImageRendererFormat.init()
+            format.opaque = true //Removes Alpha Channel
+            format.scale = self.scale //Keeps original image scale.
+            let size = self.size
+            return UIGraphicsImageRenderer(size: size, format: format).image { _ in
+                self.draw(in: CGRect(origin: .zero, size: size))
+            }
+        }
+    
     func upOrientationImage() -> UIImage? {
         switch imageOrientation {
         case .up:
@@ -99,6 +108,8 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return result
     }
+    
+
 }
 
 

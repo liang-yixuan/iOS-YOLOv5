@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  RUOK
+//  HAPPYPEOPLE
 //
 //  Created by SHORT on 24/8/21.
 //

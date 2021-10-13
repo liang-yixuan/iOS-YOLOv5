@@ -1,6 +1,6 @@
 //
 //  AboutViewController.swift
-//  RUOK
+//  HAPPYPEOPLE
 //
 //  Created by SHORT on 2/9/21.
 //
