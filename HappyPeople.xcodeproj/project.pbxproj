@@ -19,7 +19,6 @@
 		46ADF8E226E0B95400687085 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46ADF8E026E0B95400687085 /* PersonCell.swift */; };
 		46ADF8E326E0B95400687085 /* PersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46ADF8E126E0B95400687085 /* PersonCell.xib */; };
 		46EA63CE26DB77810064A9A7 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EA63CD26DB77810064A9A7 /* ResultViewController.swift */; };
-		46EA63D326DBC4910064A9A7 /* Happy_People.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 46EA63D226DBC4910064A9A7 /* Happy_People.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,6 @@
 		46ADF8E026E0B95400687085 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		46ADF8E126E0B95400687085 /* PersonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCell.xib; sourceTree = "<group>"; };
 		46EA63CD26DB77810064A9A7 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		46EA63D226DBC4910064A9A7 /* Happy_People.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Happy_People.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +75,6 @@
 				4618BE4B26D4D1E30075EA2E /* SceneDelegate.swift */,
 				4618BE5226D4D1E80075EA2E /* Assets.xcassets */,
 				4618BE5726D4D1E80075EA2E /* Info.plist */,
-				46EA63D226DBC4910064A9A7 /* Happy_People.jpeg */,
 			);
 			path = HappyPeople;
 			sourceTree = "<group>";
@@ -85,6 +82,7 @@
 		4618BE5E26D4E2D30075EA2E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				46ADF8E026E0B95400687085 /* PersonCell.swift */,
 				46EA63CD26DB77810064A9A7 /* ResultViewController.swift */,
 				46ADF8D926E0863500687085 /* MainViewController.swift */,
 				46ADF8D726E0850400687085 /* AboutViewController.swift */,
@@ -107,7 +105,6 @@
 			children = (
 				46ADF8D526DE2C0900687085 /* RequestHandler.swift */,
 				460896E026E0CBD900D50E60 /* ResultProcessor.swift */,
-				46ADF8E026E0B95400687085 /* PersonCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,7 +170,6 @@
 				4618BE5326D4D1E80075EA2E /* Assets.xcassets in Resources */,
 				4618BE5126D4D1E30075EA2E /* Main.storyboard in Resources */,
 				46ADF8E326E0B95400687085 /* PersonCell.xib in Resources */,
-				46EA63D326DBC4910064A9A7 /* Happy_People.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,8 +16,6 @@ class PersonCell: UITableViewCell {
     @IBOutlet weak var ethnicity: UILabel!
     @IBOutlet weak var emotion: UILabel!
     
-
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,7 +26,6 @@ class PersonCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 }

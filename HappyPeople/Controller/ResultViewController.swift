@@ -17,22 +17,23 @@ class ResultViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
 
         
-// Receive data from Main view
+        // Receive data from Main view
         NotificationCenter.default.addObserver(self, selector: #selector(didGetImg(_:)), name: Notification.Name("img"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(didGetText(_:)), name: Notification.Name("text"), object: nil)
         
-// Set table view data source and register UI view for cell
+        // Set table view data source and register UI view for cell
         tableView.dataSource = self
         tableView.register(UINib(nibName: "PersonCell", bundle: nil), forCellReuseIdentifier: "TableCell")
     }
     
-    
+    // Receive data from Main view
     @objc func didGetImg(_ notification: Notification) {
         let gotImage = notification.object as! UIImage?
         resultImgView.image = gotImage
         print("Display received image")
     }
     
+    // Receive data from Main view
     @objc func didGetText(_ notification: Notification) {
         let gotText = notification.object as! Data
         people = resultProcessor.getPeople(result: gotText)
@@ -44,6 +45,7 @@ class ResultViewController: UIViewController, UIGestureRecognizerDelegate {
     
 }
 
+// Controller for table view
 extension ResultViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return people.count

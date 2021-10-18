@@ -19,16 +19,19 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     var yoloRequestHandler = RequestHandler(IPAddress: "http://115.146.94.146:5001")
     var model : String = "SSD"
     
+    // Hide Naviagation Bar when loading
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
     }
     
+    // Unhide Naviagation Bar when leaving
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.isNavigationBarHidden = false
     }
     
+    // Set up 2 image pickers
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +44,7 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         imagePicker2.allowsEditing = false
     }
     
+    // Call different RequestHandlers for different models
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
@@ -54,7 +58,6 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             default:
                 break
             }
-//            yoloRequestHandler.imageRequest(image : pickedImage.upOrientationImage()!.resizeWithWidth(width: 300)!.removeAlpha())
         }
         
         picker.dismiss(animated: true) {
@@ -90,6 +93,7 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
 }
 
+// Helper functions to adjust UIImage
 extension UIImage {
     func removeAlpha() -> UIImage {
             let format = UIGraphicsImageRendererFormat.init()
@@ -113,6 +117,7 @@ extension UIImage {
             return result
         }
     }
+    
     func resizeWithPercent(percentage: CGFloat) -> UIImage? {
         let imageView = UIImageView(frame: CGRect(origin: .zero, size: CGSize(width: size.width * percentage, height: size.height * percentage)))
         imageView.contentMode = .scaleAspectFit
@@ -124,6 +129,7 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return result
     }
+    
     func resizeWithWidth(width: CGFloat) -> UIImage? {
         let imageView = UIImageView(frame: CGRect(origin: .zero, size: CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))))
         imageView.contentMode = .scaleAspectFit
@@ -135,8 +141,6 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return result
     }
-    
-
 }
 
 

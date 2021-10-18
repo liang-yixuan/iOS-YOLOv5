@@ -4,6 +4,9 @@
 //
 //  Created by SHORT on 2/9/21.
 //
+// The ResultProcessor is to decode the JSON format data received from the server.
+// CALL: Once the data is received from the POST Request
+// RETURN: It will pass-on the People (a list of Person objects) to the ResultViewController.
 
 import Foundation
 

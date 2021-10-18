@@ -4,12 +4,16 @@
 //
 //  Created by SHORT on 31/8/21.
 //
+// The RequestHandler is to send out 2 POST requests from the application to the server.
+// CALL: Once a new image is upload from the device.
+// RETURN: It will pass-on the returned the image to the ResultViewController and the data (JSON) to the ResultProcessor.
 
 import UIKit
 
 struct RequestHandler {
-//    let IPAddress = "http://115.146.94.146:5001"
     let IPAddress : String
+    
+    // Send out two POST request for each image
     func imageRequest(image : UIImage) {
         let imageRequest: URLRequest
         let boundary: String
@@ -21,6 +25,8 @@ struct RequestHandler {
             return
         }
         print(boundary)
+        
+        //  Send Request 1
         let task = URLSession.shared.dataTask(with: imageRequest) {data, response, error in
             if let data = data {
                 if let image = UIImage(data: data) {
@@ -35,6 +41,7 @@ struct RequestHandler {
                             print(error)
                             return
                         }
+                        //  Send Request 2
                         let textTask = URLSession.shared.dataTask(with: textRequest) {data, response, error in
                             if let data = data {
                                 DispatchQueue.main.async {
@@ -55,12 +62,11 @@ struct RequestHandler {
             } else if let error = error {
                 print("HTTP Request Failed \(error)")
             }
-
         }
         task.resume()
     }
     
-    
+    // Compose the first request (sending: image, receiving: image)
     func createImageRequest(route: String, image: UIImage) throws -> (URLRequest, String) {
 
         let boundary = generateBoundaryString()
@@ -72,7 +78,7 @@ struct RequestHandler {
         return (request, boundary)
     }
 
-
+    // Create the request body for the first image request
     private func createImageBody(boundary: String, image: UIImage) throws -> Data {
         var body = Data()
             let data = Data((image.pngData())!)
@@ -88,11 +94,12 @@ struct RequestHandler {
         return body
     }
     
-    
+    // Generate an unique name for each image before sending
     private func generateBoundaryString() -> String {
         return "Boundary-\(UUID().uuidString)"
     }
     
+    // Compose the second request (sending: image name, receiving: JSON result)
     func createTextRequest(route: String, boundary: String) throws -> URLRequest{
 
         let url = URL(string: IPAddress + route)!
@@ -104,6 +111,7 @@ struct RequestHandler {
     }
 }
 
+// Extend to append property to the Data type
 extension Data {
     mutating func append(_ string: String, using encoding: String.Encoding = .utf8) {
         if let data = string.data(using: encoding) {
