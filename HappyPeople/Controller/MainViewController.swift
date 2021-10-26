@@ -14,7 +14,7 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     let imagePicker1 = UIImagePickerController()
     let imagePicker2 = UIImagePickerController()
-    var ssdRequestHandler = RequestHandler(IPAddress: "http://115.146.94.147:5003x")
+    var ssdRequestHandler = RequestHandler(IPAddress: "http://115.146.94.147:5003")
     var frcnnRequestHandler = RequestHandler(IPAddress: "http://115.146.94.147:5002")
     var yoloRequestHandler = RequestHandler(IPAddress: "http://115.146.94.147:5001")
     var model : String = "SSD"
