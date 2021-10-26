@@ -14,9 +14,9 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     let imagePicker1 = UIImagePickerController()
     let imagePicker2 = UIImagePickerController()
-    var ssdRequestHandler = RequestHandler(IPAddress: "http://115.146.94.146:5004")
-    var frcnnRequestHandler = RequestHandler(IPAddress: "http://115.146.94.146:5003")
-    var yoloRequestHandler = RequestHandler(IPAddress: "http://115.146.94.146:5001")
+    var ssdRequestHandler = RequestHandler(IPAddress: "http://115.146.94.147:5003x")
+    var frcnnRequestHandler = RequestHandler(IPAddress: "http://115.146.94.147:5002")
+    var yoloRequestHandler = RequestHandler(IPAddress: "http://115.146.94.147:5001")
     var model : String = "SSD"
     
     // Hide Naviagation Bar when loading
